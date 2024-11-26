@@ -1,0 +1,31 @@
+{
+  "name": "rcpch.tech",
+  "version": "0.0.1",
+  "description": "A simple static website for the RCPCH in-house software development team",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "astro": "5.0.0-beta.11",
+    "@astrojs/tailwind": "5.1.2",
+    "tailwindcss": "3.4.15",
+    "daisyui": "4.12.14",
+    "@tailwindcss/typography": "0.5.15"
+  },
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcpch/rcpch.tech.git"
+  },
+  "author": "",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rcpch/rcpch.tech/issues"
+  },
+  "homepage": "https://github.com/rcpch/rcpch.tech#readme"
+}
