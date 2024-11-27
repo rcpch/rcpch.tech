@@ -45,8 +45,7 @@
 }
 
 body {
-  background-color: var(--rcpch-charcoal);
-  color: hotpink;
+  /* background-color: var(--rcpch-charcoal); */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }

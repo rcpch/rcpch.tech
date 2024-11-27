@@ -3,5 +3,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle="Home">
-  content
+  <div
+    class="hero min-h-screen"
+    style="background-image: url(background.jpg);">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center bg-zinc-900/50 rounded">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">
+          Coding by clinicians
+          <br />
+          for clinicians
+        </h1>
+        <p class="mb-5">
+          We're the in-house development team of the <a href="https://www.rcpch.ac.uk/">Royal College of Paediatrics and Child Health</a>
+        </p>
+        <p class="mb-5">
+          We make software you'll want to use every day.
+        </p>
+        <a class="btn btn-primary" href="work-with-us">Work with us</a>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
