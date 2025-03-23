@@ -2,3 +2,6 @@
 
 site
 .cache/*
+
+node_modules
+.astro
