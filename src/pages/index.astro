@@ -11,12 +11,27 @@ import Layout from '../layouts/Layout.astro';
 		<h3 class="text-accent">A new way to build technology for paediatrics and beyond.</h3>
 		<p>
 			We are looking for
-			<ul>
-				<li>Developers and "clinicians who code"</li>
-				<li>Healthcare professionals who want help building ideas</li>
-				<li>RCPCH members to sit on our Digital Committee</li>
-			</ul>
-		</p>
+    </p>
+    <ul>
+      <li>Developers and "clinicians who code"</li>
+      <li>Healthcare professionals who want help building ideas</li>
+      <li>RCPCH members to sit on our Digital Committee</li>
+    </ul>
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Email</legend>
+      <input type="text" class="input" placeholder="example@rcpch.tech" />
+      <legend class="fieldset-legend">Job Title</legend>
+      <input type="text" class="input" placeholder="" />
+      <legend class="fieldset-legend">How can we help?</legend>
+      <textarea class="textarea h-24"></textarea>
+      <p class="fieldset-label mt-0 mb-0">
+        We will contact you to register on our <a href="https://forum.rcpch.tech/">forum</a>
+      </p>
+      <p class="fieldset-label mt-0 mb-0">
+        We process your data in accordance with the <a href="https://www.rcpch.ac.uk/about-us/privacy-policy-website">RCPCH Privacy Policy</a>
+      </p>
+      <input type="submit" class="btn btn-primary" value="Register" />
+    </fieldset>
 	</div>
 	<div class="prose p-5 border-b-5 border-secondary">
 		<h2 class="mb-2">Growth Charts</h2>
@@ -38,7 +53,7 @@ import Layout from '../layouts/Layout.astro';
     <p>
       We are a multi-disciplinary team of working clinicians, health professionals, developers and technologists.
       Our Incubator program operates like a startup accelerator, offering you advice and guidance on your digital projects.
-      As a Royal College, we focus on those the market can't or wont provide.
+      As a Royal College, we focus on those ideas the market can't or wont provide.
       <ul>
         <li>
           <strong>Procurement</strong>: we advise on how to commission an effective, appropriate and resilient digital project.
