@@ -22,21 +22,18 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    env:
-      ENABLE_PDF_EXPORT: 1 # Makes PDF export an option, default disabled, when building locally
-      ENABLE_GIT_COMMITTERS: True # Makes git-committers an option, default disabled, when building locally
     name: Build and Deploy to Azure
     steps:
       - name: Checkout
         uses: actions/checkout@v4 # latest as at March 2024
         with:
           submodules: true
-      - name: Setup Python
-        uses: actions/setup-python@v5 # latest as at March 2024
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - run: mkdocs build
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+      - run: pnpm install
+      - run: pnpm build
         id: builddeploy
       - name: Deploy to Azure
         uses: Azure/static-web-apps-deploy@v1 # latest as at March 2024
@@ -48,7 +45,7 @@ jobs:
           ###### Repository/Build Configurations ######
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "site" # Built app content directory - optional
+          output_location: "dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
